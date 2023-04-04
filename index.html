@@ -61,6 +61,7 @@
           <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Skills</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Projects</span></a></li>
+          <li><a href="#publications" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Publications</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -385,13 +386,13 @@
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
             <h4 class="title"><a href="https://github.com/masakhane-io/masakhane_decolonise">Masakhane Decolonise</a></h4>
-            <p class="description">A collaborative research project from Masakhane. An ongoing research project about text summarization and Machine Translation using scientific </p>
+            <p class="description" align="justify">A collaborative research project from Masakhane. An ongoing research project about text summarization and Machine Translation using scientific </p>
           </div>
 
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
             <div class="icon"><i class="bi bi-card-checklist"></i></div>
             <h4 class="title"><a href="https://github.com/Toadoum/masakhane-news">AfricaNEWS: News Topic Classification for African languages</a></h4>
-            <p class="description">A collaborative research project from Masakhane. We have developed A new dataset for news topic classification in 13 African languages, baseline and few-shot learning experiments. </p>
+            <p class="description" align="justify">A collaborative research project from Masakhane. We have developed A new dataset for news topic classification in 13 African languages, baseline and few-shot learning experiments. </p>
           </div>
          
           <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
@@ -414,6 +415,73 @@
         </div>
       </div>
     </section><!-- Project Section -->
+
+
+
+    <!-- ======= Projects Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Publications</h2>
+          <p>Here is the list of my publications as autor/co-author</p>
+        </div>
+
+        <div class="row">
+          
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="https://openreview.net/forum?id=sj45chH1F1">AfricaNEWS: News Topic Classification for African languages</a></h4>
+            <p class="description" align="justify">Abstract: Recently, prompt-based tuning of large language models (LLMs) is growing in popularity, and have shown to be very effective for few-shot learning with as little 
+              as 5 or 10 labelled examples.  However, most extensive evaluations are mostly done in English and other high-resource languages, and it is unclear how effective this prompting approach perform 
+              for low-resource languages. In this paper, we extend this evaluation to low-resource African languages on the news topic classification dataset. Despite the simplicity of the task, it is still 
+              often part of the evaluation of prompt-based LLMs. We create AfricaNEWS --- a large-scale human-annotated news topic classification dataset for 13 typologically-diverse languages widely spoken 
+              in African including English and French. We provide an extensive evaluation of baseline models by training classical machine learning models and fine-tuning several LLMs. Furthermore, we provide 
+              several zero-shot and few-shot learning baselines using both prompt-based and non-prompt approaches. Our experimental results shows that with as little as 10 examples per category, we are able 
+              to achieve a minimum of 76F1 points on several low-resource African languages, achieving 83% performance of the full supervised training.  </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="https://www.mdpi.com/2227-7390/10/21/3988">Error Correction Based Deep Neural Networks for Modeling and Predicting South African Wildlife–Vehicle Collision Data</a></h4>
+            <p class="description" align="justify">Abstract: The seasonal autoregressive integrated moving average with exogenous factors (SARIMAX) has shown promising results in modeling small and sparse observed time-series data by capturing linear 
+              features using independent and dependent variables. Long short-term memory (LSTM) is a promising neural network for learning nonlinear dependence features from data. With the increase in 
+              wildlife roadkill patterns, the SARIMAX-only and LSTM-only models would likely fail to learn the precise endogenous and/or exogenous variables driven by this wildlife roadkill data. 
+              In this paper, we design and implement an error correction mathematical framework based on LSTM-only. The framework extracts features from the residual error generated by a SARIMAX-only 
+              model. The learned residual features correct the output time-series prediction of the SARIMAX-only model. The process combines SARIMAX-only predictions and LSTM-only residual predictions 
+              to obtain a hybrid SARIMAX-LSTM. The models are evaluated using South African wildlife–vehicle collision datasets, and the experiments show that compared to single models, SARIMAX-LSTM 
+              increases the accuracy of a taxon whose linear components outweigh the nonlinear ones. In addition, the hybrid model fails to outperform LSTM-only when a taxon contains more nonlinear 
+              components rather than linear components. Our assumption of the results is that the collected exogenous and endogenous data are insufficient, which limits the hybrid model’s performance 
+              since it cannot accurately detect seasonality on residuals from SARIMAX-only and minimize the SARIMAX-LSTM error. We conclude that the error correction framework should be preferred over 
+              single models in wildlife time-series modeling and predictions when a dataset contains more linear components. Adding more related data may improve the prediction performance of SARIMAX-LSTM. </p>
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="https://github.com/Toadoum/masakhane-news">AfricaNEWS: News Topic Classification for African languages</a></h4>
+            <p class="description">A collaborative research project from Masakhane. We have developed A new dataset for news topic classification in 13 African languages, baseline and few-shot learning experiments. </p>
+          </div>
+         
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="https://github.com/Toadoum/Hybrid-AR-LSTM-model-for-prediction-of-birth">Hybrid Deep Recurrent Neural Neutwork (LSTM)</a></h4>
+            <p class="description" align="justify">The aim is to combine best statistical model and LSTM in single architecture that that will take advantage of the two models and capture linear and nonlinear phenomena because it has both linear and nonlinear modeling capabilities.</p>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="https://github.com/Toadoum/Linear-Regression-with-Regularization-and-Cross-Validation-from-Scratch">Linear Regression with Regularization and Cross-Validation From Scratch</a></h4>
+            <p class="description">In this project we have created a linear regression model with regularization and cross-validation from scratch.</p>
+          </div>
+          
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-card-checklist"></i></div>
+            <h4 class="title"><a href="https://github.com/Toadoum/Sentiment-Analysis-with-Bernoulli-Naive-Bayes">Sentimental Analysis Using Bernoulli Naive Bayes</a></h4>
+            <p class="description">Here, we made use of the Bernoulli Naive Bayes to classify sentiments on the review of the movies dataset presented by Kaggle.</p>
+          </div>  -->
+        </div>
+      </div>
+    </section><!-- Project Section -->
+
 
      <!-- ======= Contact Section ======= -->
      <section id="contact" class="contact">
