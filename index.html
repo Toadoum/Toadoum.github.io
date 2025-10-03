@@ -30,6 +30,10 @@
       object-fit: cover;
       margin-bottom: 1rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    header img.profile-pic:hover {
+      transform: scale(1.05);
     }
     header h1 {
       font-size: 2.5rem;
@@ -117,6 +121,7 @@
 
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
+      header img.profile-pic { width: 120px; height: 120px; }
       header h1 { font-size: 1.8rem; }
       header h2 { font-size: 1rem; }
       section { margin: 1rem; padding: 1rem; }
@@ -172,15 +177,19 @@
       <li><strong>Online Polarization Modeling:</strong> NLP-based research during internship at EPFL.</li>
       <li><strong>UNICEF RCCE Mapping:</strong> Designed actor mapping & data collection tools in Chad.</li>
     </ul>
+    <p style='margin-top:1rem;'>
+      <a href="https://orcid.org/0000-0003-2617-081X" target="_blank" style="display:inline-block; padding:0.6rem 1.2rem; background:#2c5364; color:white; border-radius:5px; text-decoration:none; font-weight:500;">View All Publications</a>
+    </p>
   </section>
 
   <section id="publications">
     <h3>Publications</h3>
     <ul>
-      <li>Pretraining Strategies using Monolingual and Parallel Data for Low-Resource MT. AfricaNLP 2025.</li>
-      <li>Ngambay–French Neural Machine Translation. NLP4TIA @ RANLP 2023.</li>
-      <li>AfriMTE & AfriCOMET: Empowering COMET for African Languages. arXiv 2023.</li>
-      <li>MASAKHANEWS: News Topic Classification for African Languages. AfricaNLP @ ICLR 2023.</li>
+      <li><a href="https://openreview.net/pdf?id=FSa9WBovfD" target="_blank">Pretraining Strategies using Monolingual and Parallel Data for Low-Resource MT. AfricaNLP 2025.</a></li>
+      <li><a href="https://arxiv.org/abs/2311.09828" target="_blank">AfriMTE & AfriCOMET: Empowering COMET for African Languages. arXiv 2023.</a></li>
+      <li><a href="https://arxiv.org/abs/2304.09972" target="_blank">MASAKHANEWS: News Topic Classification for African Languages. AfricaNLP @ ICLR 2023.</a></li>
+      <li><a href="http://arxiv.org/abs/2308.13497" target="_blank">Ngambay–French Neural Machine Translation. NLP4TIA @ RANLP 2023.</a></li>
+      <li><a href="https://www.mdpi.com/2227-7390/10/21/3988" target="_blank">Error-Correction DNNs for South African Wildlife-Vehicle Collision Data. MDPI 2022.</a></li>
     </ul>
   </section>
 
