@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakayo Toadoum Sari - NLP Researcher</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f9fc;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem 3rem 2rem;
+      animation: fadeInDown 1.2s ease-in-out;
+      position: relative;
+    }
+    header img.profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0.5rem 0;
+    }
+    header h2 {
+      font-weight: 300;
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #2c5364;
+      padding: 0.8rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0.5rem 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #f7d774;
+    }
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      animation: fadeInUp 1.2s ease;
+    }
+    section h3 {
+      border-bottom: 2px solid #2c5364;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .skills-list, .contact-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .skills-list span, .contact-list a {
+      background: #e3edf5;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .skills-list span:hover, .contact-list a:hover {
+      transform: translateY(-5px);
+      background: #d2e4f5;
+    }
+    .contact-list a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #203a43;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-list a i {
+      color: #2c5364;
+      font-size: 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #203a43;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      header h1 { font-size: 1.8rem; }
+      header h2 { font-size: 1rem; }
+      section { margin: 1rem; padding: 1rem; }
+      nav { flex-direction: column; }
+      nav a { margin: 0.3rem 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="profile.jpg" alt="Sakayo Toadoum Sari" class="profile-pic">
+    <h1>Sakayo Toadoum Sari</h1>
+    <h2>Multilingual NLP Researcher • Machine Learning Engineer • PhD Candidate</h2>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#resume">Resume</a>
+    <a href="#projects">Projects</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h3>About</h3>
+    <p>
+      I am a Multilingual NLP researcher and engineer focusing on low-resource language technologies, including machine translation, ASR/TTS, and discourse-level semantics. Currently a PhD candidate at CRIL (Université d’Artois), I am passionate about responsible AI, dataset design, and inclusive language technologies for the Global South. I have worked with organizations such as UNICEF, EPFL, and Batazia, and actively contribute to Masakhane and AfricaNLP communities.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h3>Skills</h3>
+    <div class="skills-list">
+      <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>Hugging Face</span>
+      <span>Machine Translation</span><span>ASR/TTS</span><span>Data Annotation</span>
+      <span>Docker</span><span>Git/GitHub</span><span>Evaluation & Human Studies</span>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h3>Resume</h3>
+    <p>
+      Download my latest CV <a href="Sakayo_Toadoum_Sari_CV.pdf" target="_blank">here</a>.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h3>Projects</h3>
+    <ul>
+      <li><strong>Ngambay–French NMT:</strong> Developed low-resource MT model (AMMI Thesis).</li>
+      <li><strong>African ASR/TTS Models:</strong> Built and evaluated speech systems for African languages (CDIAL).</li>
+      <li><strong>Online Polarization Modeling:</strong> NLP-based research during internship at EPFL.</li>
+      <li><strong>UNICEF RCCE Mapping:</strong> Designed actor mapping & data collection tools in Chad.</li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h3>Publications</h3>
+    <ul>
+      <li>Pretraining Strategies using Monolingual and Parallel Data for Low-Resource MT. AfricaNLP 2025.</li>
+      <li>Ngambay–French Neural Machine Translation. NLP4TIA @ RANLP 2023.</li>
+      <li>AfriMTE & AfriCOMET: Empowering COMET for African Languages. arXiv 2023.</li>
+      <li>MASAKHANEWS: News Topic Classification for African Languages. AfricaNLP @ ICLR 2023.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h3>Contact</h3>
+    <div class="contact-list">
+      <a href="mailto:sakayo@cril.fr"><i class="fa-solid fa-envelope"></i>Email</a>
+      <a href="https://github.com/Toadoum" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
+      <a href="https://linkedin.com/in/toadoum" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+      <a href="https://twitter.com/toadoum" target="_blank"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Sakayo Toadoum Sari. All Rights Reserved.
+  </footer>
+</body>
+</html>
