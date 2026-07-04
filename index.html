@@ -1,210 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sakayo Toadoum Sari - NLP Researcher</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f9fc;
-      color: #333;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
-      text-align: center;
-      padding: 4rem 2rem 3rem 2rem;
-      animation: fadeInDown 1.2s ease-in-out;
-      position: relative;
-    }
-    header img.profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 4px solid white;
-      object-fit: cover;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-    header img.profile-pic:hover {
-      transform: scale(1.05);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0.5rem 0;
-    }
-    header h2 {
-      font-weight: 300;
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: #2c5364;
-      padding: 0.8rem;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0.5rem 1rem;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-    nav a:hover {
-      color: #f7d774;
-    }
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 1.5rem 2rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      animation: fadeInUp 1.2s ease;
-    }
-    section h3 {
-      border-bottom: 2px solid #2c5364;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
-    .skills-list, .contact-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .skills-list span, .contact-list a {
-      background: #e3edf5;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .skills-list span:hover, .contact-list a:hover {
-      transform: translateY(-5px);
-      background: #d2e4f5;
-    }
-    .contact-list a {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      color: #203a43;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .contact-list a i {
-      color: #2c5364;
-      font-size: 1.2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      background: #203a43;
-      color: white;
-      margin-top: 2rem;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakayo Toadoum Sari — NLP Researcher · PhD Candidate · African Language Technologist</title>
+<meta name="description" content="PhD candidate at CRIL-CNRS working on discourse semantics and causal reasoning. Founder of PlotWeaver, voice AI for African languages.">
+<meta property="og:title" content="Sakayo Toadoum Sari — NLP Researcher">
+<meta property="og:description" content="Building language technology for communities the industry forgot.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root{
+  --ink:#0A1628;          /* deep navy — brand */
+  --ink-2:#0F1F38;        /* raised surface */
+  --ink-3:#16294A;        /* card border base */
+  --paper:#E9EEF6;        /* primary text */
+  --muted:#8BA0BE;        /* secondary text */
+  --blue:#3B82F6;         /* brand accent */
+  --blue-soft:rgba(59,130,246,.14);
+  --gold:#F7C948;         /* Chad-flag gold, used sparingly */
+  --line:rgba(139,160,190,.18);
+  --radius:14px;
+  --font-display:'Montserrat',sans-serif;
+  --font-body:'Inter',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  font-family:var(--font-body);
+  background:var(--ink);
+  color:var(--paper);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+::selection{background:var(--blue);color:#fff}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+img{max-width:100%}
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+/* ---------- Nav ---------- */
+.nav{
+  position:fixed;inset:0 0 auto 0;z-index:50;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:.9rem clamp(1rem,4vw,3rem);
+  background:rgba(10,22,40,.82);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav__logo{
+  font-family:var(--font-mono);font-size:.9rem;color:var(--paper);
+  letter-spacing:.04em;
+}
+.nav__logo b{color:var(--blue)}
+.nav__links{display:flex;gap:1.6rem;list-style:none}
+.nav__links a{
+  color:var(--muted);font-size:.88rem;font-weight:500;
+  transition:color .2s ease;
+}
+.nav__links a:hover{color:var(--paper);text-decoration:none}
+.nav__toggle{
+  display:none;background:none;border:none;color:var(--paper);
+  font-size:1.3rem;cursor:pointer;padding:.3rem .5rem;
+}
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      header img.profile-pic { width: 120px; height: 120px; }
-      header h1 { font-size: 1.8rem; }
-      header h2 { font-size: 1rem; }
-      section { margin: 1rem; padding: 1rem; }
-      nav { flex-direction: column; }
-      nav a { margin: 0.3rem 0; }
-    }
-  </style>
+/* ---------- Hero ---------- */
+.hero{
+  min-height:100svh;
+  display:flex;flex-direction:column;justify-content:center;
+  padding:7rem clamp(1rem,6vw,4rem) 4rem;
+  position:relative;overflow:hidden;
+}
+.hero__wave{
+  position:absolute;inset:auto 0 0 0;height:180px;opacity:.5;
+  pointer-events:none;
+}
+.hero__eyebrow{
+  font-family:var(--font-mono);font-size:.8rem;color:var(--gold);
+  letter-spacing:.12em;text-transform:uppercase;margin-bottom:1.4rem;
+}
+.hero__greeting{
+  font-family:var(--font-display);font-weight:900;
+  font-size:clamp(3.2rem,11vw,7.5rem);
+  line-height:1.02;letter-spacing:-.02em;color:var(--paper);
+  min-height:1.1em;
+}
+.hero__greeting .cursor{
+  display:inline-block;width:.06em;background:var(--blue);
+  margin-left:.06em;animation:blink 1s steps(1) infinite;
+  height:.9em;vertical-align:baseline;
+}
+@keyframes blink{50%{opacity:0}}
+.hero__lang{
+  font-family:var(--font-mono);font-size:.85rem;color:var(--muted);
+  margin-top:.9rem;min-height:1.4em;
+}
+.hero__lang b{color:var(--blue);font-weight:500}
+.hero__name{
+  margin-top:2.6rem;font-family:var(--font-display);font-weight:800;
+  font-size:clamp(1.4rem,3vw,2rem);letter-spacing:-.01em;
+}
+.hero__tagline{
+  margin-top:.6rem;max-width:620px;color:var(--muted);
+  font-size:clamp(1rem,1.6vw,1.12rem);
+}
+.hero__tagline strong{color:var(--paper);font-weight:600}
+.hero__cta{margin-top:2.2rem;display:flex;gap:.9rem;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:.55rem;
+  padding:.8rem 1.5rem;border-radius:999px;font-weight:600;
+  font-size:.92rem;transition:transform .2s ease,background .2s ease,border-color .2s ease;
+  border:1px solid transparent;
+}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn--primary{background:var(--blue);color:#fff}
+.btn--primary:hover{background:#2f6fe0}
+.btn--ghost{border-color:var(--line);color:var(--paper)}
+.btn--ghost:hover{border-color:var(--blue)}
+.hero__scroll{
+  position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);
+  color:var(--muted);font-size:1.1rem;animation:drift 2.4s ease-in-out infinite;
+}
+@keyframes drift{50%{transform:translate(-50%,7px)}}
+
+/* ---------- Sections ---------- */
+section{padding:5rem clamp(1rem,6vw,4rem)}
+.section__inner{max-width:1060px;margin:0 auto}
+.section__eyebrow{
+  font-family:var(--font-mono);font-size:.78rem;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--blue);margin-bottom:.6rem;
+}
+.section__title{
+  font-family:var(--font-display);font-weight:800;
+  font-size:clamp(1.7rem,4vw,2.5rem);letter-spacing:-.01em;
+  margin-bottom:2.2rem;
+}
+.section__title .dot{color:var(--gold)}
+
+/* reveal on scroll */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.is-visible{opacity:1;transform:none}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:1fr 300px;gap:3rem;align-items:start}
+.about p{color:var(--muted);margin-bottom:1rem;font-size:1.02rem}
+.about p strong{color:var(--paper)}
+.about__stats{display:grid;gap:.9rem}
+.stat{
+  background:var(--ink-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:1rem 1.2rem;
+}
+.stat b{
+  display:block;font-family:var(--font-display);font-weight:800;
+  font-size:1.5rem;color:var(--blue);
+}
+.stat span{font-size:.85rem;color:var(--muted)}
+
+/* ---------- Work cards ---------- */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:1.2rem}
+.card{
+  background:var(--ink-2);border:1px solid var(--line);
+  border-radius:var(--radius);padding:1.5rem;
+  display:flex;flex-direction:column;gap:.7rem;
+  transition:transform .25s ease,border-color .25s ease;
+}
+.card:hover{transform:translateY(-5px);border-color:var(--blue)}
+.card__top{display:flex;align-items:center;justify-content:space-between;gap:.6rem}
+.card__icon{
+  width:42px;height:42px;border-radius:10px;background:var(--blue-soft);
+  display:grid;place-items:center;color:var(--blue);font-size:1.05rem;flex-shrink:0;
+}
+.tag{
+  font-family:var(--font-mono);font-size:.68rem;letter-spacing:.05em;
+  padding:.28rem .65rem;border-radius:999px;white-space:nowrap;
+}
+.tag--live{background:rgba(46,160,67,.15);color:#57c56f}
+.tag--review{background:rgba(210,153,34,.15);color:var(--gold)}
+.tag--active{background:var(--blue-soft);color:var(--blue)}
+.card h4{font-family:var(--font-display);font-weight:700;font-size:1.05rem}
+.card p{color:var(--muted);font-size:.92rem;flex:1}
+.card__meta{font-family:var(--font-mono);font-size:.72rem;color:var(--muted)}
+
+/* ---------- Publications ---------- */
+.pubs{display:flex;flex-direction:column;gap:.4rem}
+.pub{
+  display:grid;grid-template-columns:64px 1fr auto;gap:1.2rem;align-items:baseline;
+  padding:1.1rem .9rem;border-radius:10px;border:1px solid transparent;
+  transition:background .2s ease,border-color .2s ease;
+}
+.pub:hover{background:var(--ink-2);border-color:var(--line);text-decoration:none}
+.pub__year{font-family:var(--font-mono);font-size:.82rem;color:var(--gold)}
+.pub__title{color:var(--paper);font-weight:500;font-size:.98rem}
+.pub__venue{display:block;color:var(--muted);font-size:.84rem;margin-top:.2rem;font-weight:400}
+.pub__arrow{color:var(--muted);font-size:.85rem;transition:color .2s,transform .2s}
+.pub:hover .pub__arrow{color:var(--blue);transform:translate(3px,-3px)}
+.pubs__more{margin-top:1.6rem}
+
+/* ---------- Timeline ---------- */
+.timeline{position:relative;padding-left:1.6rem;display:flex;flex-direction:column;gap:2rem}
+.timeline::before{
+  content:"";position:absolute;left:5px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(var(--blue),var(--ink-3));
+}
+.tl{position:relative}
+.tl::before{
+  content:"";position:absolute;left:-1.6rem;top:.45em;width:12px;height:12px;
+  border-radius:50%;background:var(--ink);border:2.5px solid var(--blue);
+}
+.tl--now::before{background:var(--gold);border-color:var(--gold)}
+.tl__year{font-family:var(--font-mono);font-size:.8rem;color:var(--blue)}
+.tl h4{font-family:var(--font-display);font-weight:700;font-size:1.02rem;margin:.2rem 0 .3rem}
+.tl p{color:var(--muted);font-size:.9rem;max-width:640px}
+
+/* ---------- Skills ---------- */
+.skillgroups{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.skillgroup{background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:1.4rem}
+.skillgroup h4{
+  font-family:var(--font-mono);font-size:.78rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.9rem;
+}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chip{
+  font-size:.82rem;font-weight:500;padding:.4rem .85rem;border-radius:999px;
+  background:var(--blue-soft);color:#9cc0f9;border:1px solid transparent;
+  transition:border-color .2s ease,transform .2s ease;
+}
+.chip:hover{border-color:var(--blue);transform:translateY(-2px)}
+
+/* ---------- Contact ---------- */
+.contact{text-align:center}
+.contact p{color:var(--muted);max-width:560px;margin:0 auto 2rem}
+.contact__grid{display:flex;justify-content:center;flex-wrap:wrap;gap:.9rem}
+.contact__grid .btn i{font-size:1.05rem}
+
+/* ---------- Footer ---------- */
+footer{
+  border-top:1px solid var(--line);padding:2rem clamp(1rem,6vw,4rem);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+  color:var(--muted);font-size:.85rem;
+}
+footer .mono{font-family:var(--font-mono);font-size:.78rem}
+
+/* ---------- Responsive ---------- */
+@media (max-width:820px){
+  .about{grid-template-columns:1fr}
+  .about__stats{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+  .pub{grid-template-columns:52px 1fr;row-gap:.2rem}
+  .pub__arrow{display:none}
+}
+@media (max-width:680px){
+  .nav__toggle{display:block}
+  .nav__links{
+    position:fixed;top:58px;right:0;left:0;
+    flex-direction:column;gap:0;background:rgba(10,22,40,.97);
+    border-bottom:1px solid var(--line);
+    max-height:0;overflow:hidden;transition:max-height .3s ease;
+  }
+  .nav__links.open{max-height:360px}
+  .nav__links a{display:block;padding:.9rem 1.4rem}
+  section{padding:3.4rem 1.1rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
 </head>
 <body>
-  <header>
-    <img src="profile.jpg" alt="Sakayo Toadoum Sari" class="profile-pic">
-    <h1>Sakayo Toadoum Sari</h1>
-    <h2>Multilingual NLP Researcher • Machine Learning Engineer • PhD Candidate</h2>
-  </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#resume">Resume</a>
-    <a href="#projects">Projects</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav class="nav" aria-label="Main navigation">
+  <a class="nav__logo" href="#top">sakayo<b>@</b>cril:~$</a>
+  <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  <ul class="nav__links" id="navLinks">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <section id="about">
-    <h3>About</h3>
-    <p>
-      I am a Multilingual NLP researcher and engineer focusing on low-resource language technologies, including machine translation, ASR/TTS, and discourse-level semantics. Currently a PhD candidate at CRIL (Université d’Artois), I am passionate about responsible AI, dataset design, and inclusive language technologies for the Global South. I have worked with organizations such as UNICEF, EPFL, and Batazia, and actively contribute to Masakhane and AfricaNLP communities.
-    </p>
-  </section>
+<header class="hero" id="top">
+  <p class="hero__eyebrow">NLP for languages the industry forgot</p>
+  <h1 class="hero__greeting" aria-label="Multilingual greeting"><span id="greetText">Lapia.</span><span class="cursor" aria-hidden="true"></span></h1>
+  <p class="hero__lang" id="greetLang"><b>Ngambay</b> · spoken by ~1M people in Chad</p>
+  <p class="hero__name">Sakayo Toadoum Sari</p>
+  <p class="hero__tagline">
+    PhD candidate in AI at <strong>CRIL-CNRS, Université d'Artois</strong>, working on discourse semantics
+    and causal reasoning. Founder of <strong>PlotWeaver</strong>, building voice AI for African languages.
+    <strong>If your language isn't in the dataset, build the dataset.</strong>
+  </p>
+  <div class="hero__cta">
+    <a class="btn btn--primary" href="#work"><i class="fa-solid fa-flask"></i>See my work</a>
+    <a class="btn btn--ghost" href="Sakayo_Toadoum_Sari_CV.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-arrow-down"></i>Download CV</a>
+  </div>
+  <svg class="hero__wave" viewBox="0 0 1440 180" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,120 C120,60 240,160 360,110 C480,60 600,150 720,100 C840,50 960,160 1080,110 C1200,60 1320,140 1440,100 L1440,180 L0,180 Z" fill="rgba(59,130,246,.08)"/>
+    <path d="M0,140 C160,90 320,170 480,130 C640,90 800,165 960,125 C1120,85 1280,155 1440,120 L1440,180 L0,180 Z" fill="rgba(59,130,246,.12)"/>
+  </svg>
+  <a class="hero__scroll" href="#about" aria-label="Scroll to about section"><i class="fa-solid fa-chevron-down"></i></a>
+</header>
 
-  <section id="skills">
-    <h3>Skills</h3>
-    <div class="skills-list">
-      <span>Python</span><span>PyTorch</span><span>TensorFlow</span><span>Hugging Face</span>
-      <span>Machine Translation</span><span>ASR/TTS</span><span>Data Annotation</span>
-      <span>Docker</span><span>Git/GitHub</span><span>Evaluation & Human Studies</span>
+<section id="about">
+  <div class="section__inner reveal">
+    <p class="section__eyebrow">01 · About</p>
+    <h2 class="section__title">Who I am<span class="dot">.</span></h2>
+    <div class="about">
+      <div>
+        <p>
+          I grew up in Chad speaking a language with almost no digital footprint. Today I build the
+          technology that gives languages like mine one. My research at <strong>CRIL-CNRS (UMR 8188)</strong>
+          connects two worlds that rarely meet: discourse-level NLP and formal methods, probing how texts
+          echo one another and how causal structure can be extracted from narratives, with formal guarantees
+          rather than heuristics.
+        </p>
+        <p>
+          Outside the lab, I run <strong>PlotWeaver</strong>, an NVIDIA Inception startup shipping production
+          ASR and TTS for Hausa and Yoruba, and I teach algorithmics at Université d'Artois. On YouTube,
+          <strong>Sakayo Tech</strong> brings AI education in French to students across francophone Africa,
+          and my mentorship program supports a first cohort of 20 young innovators in Chad.
+        </p>
+        <p>
+          I've worked with UNICEF, EPFL, and Batazia, and I contribute to the
+          <strong>Masakhane</strong> and AfricaNLP communities as a researcher and reviewer.
+        </p>
+      </div>
+      <div class="about__stats">
+        <div class="stat"><b>7+</b><span>peer-reviewed publications</span></div>
+        <div class="stat"><b>5+</b><span>African languages in production systems</span></div>
+        <div class="stat"><b>80+</b><span>students trained in Chad &amp; Cameroon</span></div>
+        <div class="stat"><b>2028</b><span>PhD defense target</span></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="resume">
-    <h3>Resume</h3>
-    <p>
-      Download my latest CV <a href="Sakayo_Toadoum_Sari_CV.pdf" target="_blank">here</a>.
-    </p>
-  </section>
-
-  <section id="projects">
-    <h3>Projects</h3>
-    <ul>
-      <li><strong>Ngambay–French NMT:</strong> Developed low-resource MT model (AMMI Thesis).</li>
-      <li><strong>African ASR/TTS Models:</strong> Built and evaluated speech systems for African languages (CDIAL).</li>
-      <li><strong>Online Polarization Modeling:</strong> NLP-based research during internship at EPFL.</li>
-      <li><strong>UNICEF RCCE Mapping:</strong> Designed actor mapping & data collection tools in Chad.</li>
-    </ul>
-  </section>
-
-  <section id="publications">
-    <h3>Publications</h3>
-    <ul>
-      <li><a href="https://aclanthology.org/2025.africanlp-1.6/" target="_blank">Pretraining Strategies using Monolingual and Parallel Data for Low-Resource MT. AfricaNLP 2025.</a></li>
-      <li><a href="https://arxiv.org/abs/2311.09828" target="_blank">AfriMTE & AfriCOMET: Empowering COMET for African Languages. arXiv 2023.</a></li>
-      <li><a href="https://arxiv.org/abs/2304.09972" target="_blank">MASAKHANEWS: News Topic Classification for African Languages. AfricaNLP @ ICLR 2023.</a></li>
-      <li><a href="http://arxiv.org/abs/2308.13497" target="_blank">Ngambay–French Neural Machine Translation. NLP4TIA @ RANLP 2023.</a></li>
-      <li><a href="https://www.mdpi.com/2227-7390/10/21/3988" target="_blank">Error-Correction DNNs for South African Wildlife-Vehicle Collision Data. MDPI 2022.</a></li>
-    </ul>
-      <p style='margin-top:1rem;'>
-      <a href="https://scholar.google.com/citations?user=uKClSfsAAAAJ&hl=en" target="_blank" style="display:inline-block; padding:0.6rem 1.2rem; background:#2c5364; color:white; border-radius:5px; text-decoration:none; font-weight:500;">View All Publications</a>
-    </p>
-  </section>
-
-  <section id="contact">
-    <h3>Contact</h3>
-    <div class="contact-list">
-      <a href="mailto:sakayo@cril.fr"><i class="fa-solid fa-envelope"></i>Email</a>
-      <a href="https://github.com/Toadoum" target="_blank"><i class="fa-brands fa-github"></i>GitHub</a>
-      <a href="https://linkedin.com/in/toadoum" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
-      <a href="https://twitter.com/toadoum" target="_blank"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+<section id="work">
+  <div class="section__inner reveal">
+    <p class="section__eyebrow">02 · Current work</p>
+    <h2 class="section__title">What I'm building<span class="dot">.</span></h2>
+    <div class="cards">
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-graduation-cap"></i></span><span class="tag tag--active">In progress</span></div>
+        <h4>PhD Thesis — Intertextuality &amp; Causality</h4>
+        <p>A semantic analysis of discourse bridging NLP with SAT-based formal methods, from echoes between migration narratives to causal network discovery in biographical trajectories.</p>
+        <span class="card__meta">CRIL-CNRS · ANR HYCI</span>
+      </article>
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-book-open"></i></span><span class="tag tag--live">SIGDIAL 2026</span></div>
+        <h4>IntertextMigra</h4>
+        <p>Detecting experiential intertextuality in migration narratives. Shows lexical methods beat semantic embeddings on this task, and explains why.</p>
+        <span class="card__meta">Accepted · Atlanta, August 2026</span>
+      </article>
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span><span class="tag tag--live">CORIA-TALN 2026</span></div>
+        <h4>EvalLLM RAG Challenge</h4>
+        <p>Solo end-to-end French RAG pipeline built under strict compute constraints, scoring above the field mean on all six official metrics.</p>
+        <span class="card__meta">Accepted · Solo entry</span>
+      </article>
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-microphone-lines"></i></span><span class="tag tag--live">Production</span></div>
+        <h4>PlotWeaver — Voice AI</h4>
+        <p>ASR, TTS, and MT for African languages, starting with Hausa and Yoruba, deployed on AWS SageMaker for enterprise clients.</p>
+        <span class="card__meta">Founder &amp; CEO · NVIDIA Inception</span>
+      </article>
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-diagram-project"></i></span><span class="tag tag--review">Under review</span></div>
+        <h4>Formal probing &amp; explainable rule learning</h4>
+        <p>Probing with inclusion-minimality guarantees, interpretable rule models with formally minimal explanations, and parameter-efficient fine-tuning studies.</p>
+        <span class="card__meta">Multiple venues</span>
+      </article>
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-brands fa-youtube"></i></span><span class="tag tag--active">Ongoing</span></div>
+        <h4>Decrypt AI — Sakayo Tech</h4>
+        <p>AI education series in French for African students: concepts, careers, and hands-on tools, published twice a week.</p>
+        <span class="card__meta">YouTube · @sakayotech</span>
+      </article>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 Sakayo Toadoum Sari. All Rights Reserved.
-  </footer>
+<section id="publications">
+  <div class="section__inner reveal">
+    <p class="section__eyebrow">03 · Publications</p>
+    <h2 class="section__title">Selected papers<span class="dot">.</span></h2>
+    <div class="pubs">
+      <a class="pub" href="https://toadoum.github.io" target="_blank" rel="noopener">
+        <span class="pub__year">2026</span>
+        <span class="pub__title">IntertextMigra: Detecting Experiential Intertextuality in Migration Narratives
+          <span class="pub__venue">SIGDIAL 2026 · accepted</span></span>
+        <span class="pub__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="pub" href="https://toadoum.github.io" target="_blank" rel="noopener">
+        <span class="pub__year">2026</span>
+        <span class="pub__title">French RAG under Strict Constraints — EvalLLM Challenge
+          <span class="pub__venue">CORIA-TALN 2026 · accepted</span></span>
+        <span class="pub__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="pub" href="https://aclanthology.org/2025.africanlp-1.6/" target="_blank" rel="noopener">
+        <span class="pub__year">2025</span>
+        <span class="pub__title">Pretraining Strategies using Monolingual and Parallel Data for Low-Resource MT
+          <span class="pub__venue">AfricaNLP 2025</span></span>
+        <span class="pub__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="pub" href="https://arxiv.org/abs/2311.09828" target="_blank" rel="noopener">
+        <span class="pub__year">2024</span>
+        <span class="pub__title">AfriMTE &amp; AfriCOMET: Empowering COMET to Embrace Under-resourced African Languages
+          <span class="pub__venue">NAACL 2024</span></span>
+        <span class="pub__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="pub" href="https://arxiv.org/abs/2304.09972" target="_blank" rel="noopener">
+        <span class="pub__year">2023</span>
+        <span class="pub__title">MasakhaNEWS: News Topic Classification for African Languages
+          <span class="pub__venue">IJCNLP-AACL 2023 · most-cited work</span></span>
+        <span class="pub__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="pub" href="http://arxiv.org/abs/2308.13497" target="_blank" rel="noopener">
+        <span class="pub__year">2023</span>
+        <span class="pub__title">Ngambay–French Neural Machine Translation
+          <span class="pub__venue">NLP4TIA @ RANLP 2023</span></span>
+        <span class="pub__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+      <a class="pub" href="https://www.mdpi.com/2227-7390/10/21/3988" target="_blank" rel="noopener">
+        <span class="pub__year">2022</span>
+        <span class="pub__title">Error-Correction DNNs for South African Wildlife-Vehicle Collision Data
+          <span class="pub__venue">MDPI Mathematics</span></span>
+        <span class="pub__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+      </a>
+    </div>
+    <p class="pubs__more">
+      <a class="btn btn--ghost" href="https://scholar.google.com/citations?user=uKClSfsAAAAJ&hl=en" target="_blank" rel="noopener">
+        <i class="fa-solid fa-graduation-cap"></i>All publications on Google Scholar
+      </a>
+    </p>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="section__inner reveal">
+    <p class="section__eyebrow">04 · Journey</p>
+    <h2 class="section__title">From N'Djamena to Lens<span class="dot">.</span></h2>
+    <div class="timeline">
+      <div class="tl tl--now">
+        <span class="tl__year">2026 — now</span>
+        <h4>PhD Year 2 · CRIL-CNRS, Université d'Artois</h4>
+        <p>First papers accepted (SIGDIAL, CORIA-TALN). Teaching algorithmics. PlotWeaver voice AI in production.</p>
+      </div>
+      <div class="tl">
+        <span class="tl__year">2025</span>
+        <h4>PhD begins · UNICEF · CDIAL</h4>
+        <p>Joined CRIL on the ANR HYCI project. RCCE consultancy for UNICEF in Chad. Built African ASR/TTS systems at CDIAL.</p>
+      </div>
+      <div class="tl">
+        <span class="tl__year">2023</span>
+        <h4>AMMI · EPFL · Batazia · Tec4Tchad</h4>
+        <p>MSc in Machine Intelligence as a Google &amp; Meta Scholar. Research internship at EPFL on polarization detection. NLP engineering at Batazia. Trained 40+ students in Python and ML.</p>
+      </div>
+      <div class="tl">
+        <span class="tl__year">2020</span>
+        <h4>AIMS Cameroon</h4>
+        <p>MSc in Industrial Mathematics as a MasterCard Foundation Scholar.</p>
+      </div>
+      <div class="tl">
+        <span class="tl__year">2017–2019</span>
+        <h4>Physics · Université de N'Gaoundéré</h4>
+        <p>BSc in Applied Physics, then MSc in Physics. First steps in web development and ML at Limbe City Council.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="section__inner reveal">
+    <p class="section__eyebrow">05 · Skills</p>
+    <h2 class="section__title">Tools I work with<span class="dot">.</span></h2>
+    <div class="skillgroups">
+      <div class="skillgroup">
+        <h4>Research</h4>
+        <div class="chips">
+          <span class="chip">Discourse semantics</span><span class="chip">Causal reasoning</span>
+          <span class="chip">Formal XAI</span><span class="chip">SAT / ASP</span>
+          <span class="chip">Machine translation</span><span class="chip">RAG</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <h4>Engineering</h4>
+        <div class="chips">
+          <span class="chip">Python</span><span class="chip">PyTorch</span>
+          <span class="chip">Hugging Face</span><span class="chip">FastAPI</span>
+          <span class="chip">ASR / TTS</span><span class="chip">Fine-tuning &amp; LoRA</span>
+        </div>
+      </div>
+      <div class="skillgroup">
+        <h4>Infrastructure</h4>
+        <div class="chips">
+          <span class="chip">AWS SageMaker</span><span class="chip">Docker</span>
+          <span class="chip">SLURM clusters</span><span class="chip">Git / GitHub</span>
+          <span class="chip">LaTeX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="section__inner reveal">
+    <p class="section__eyebrow">06 · Contact</p>
+    <h2 class="section__title">Let's talk<span class="dot">.</span></h2>
+    <p>Building something for underserved languages, or want to collaborate on discourse, causality, or African NLP? I'd love to hear about it.</p>
+    <div class="contact__grid">
+      <a class="btn btn--primary" href="mailto:sakayo@cril.fr"><i class="fa-solid fa-envelope"></i>sakayo@cril.fr</a>
+      <a class="btn btn--ghost" href="https://github.com/Toadoum" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i>GitHub</a>
+      <a class="btn btn--ghost" href="https://linkedin.com/in/toadoum" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+      <a class="btn btn--ghost" href="https://huggingface.co/Toadoum" target="_blank" rel="noopener">🤗 Hugging Face</a>
+      <a class="btn btn--ghost" href="https://youtube.com/@sakayotech" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i>Sakayo Tech</a>
+      <a class="btn btn--ghost" href="https://twitter.com/ToadoumSari" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter"></i>Twitter</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© <span id="year">2026</span> Sakayo Toadoum Sari</span>
+  <span class="mono">built with plain HTML/CSS · no framework needed</span>
+</footer>
+
+<script>
+// ----- Multilingual greeting typewriter (the signature) -----
+const greetings = [
+  { text: "Lapia.",   lang: "Ngambay",  note: "spoken by ~1M people in Chad" },
+  { text: "Bonjour.", lang: "French",   note: "lingua franca across 21 African countries" },
+  { text: "Sannu.",   lang: "Hausa",    note: "~80M speakers · in production at PlotWeaver" },
+  { text: "Ẹ n lẹ́.",  lang: "Yoruba",   note: "~45M speakers · in production at PlotWeaver" },
+  { text: "Hello.",   lang: "English",  note: "the one the datasets already know" }
+];
+const greetEl = document.getElementById("greetText");
+const langEl  = document.getElementById("greetLang");
+const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let gi = 0;
+
+function showGreeting(i){
+  const g = greetings[i];
+  langEl.innerHTML = "<b>" + g.lang + "</b> · " + g.note;
+  if (reduced){ greetEl.textContent = g.text; return Promise.resolve(); }
+  return new Promise(resolve => {
+    let out = "", ci = 0;
+    greetEl.textContent = "";
+    const type = setInterval(() => {
+      out += g.text[ci++];
+      greetEl.textContent = out;
+      if (ci >= g.text.length){ clearInterval(type); resolve(); }
+    }, 90);
+  });
+}
+async function cycle(){
+  await showGreeting(gi);
+  setTimeout(() => {
+    if (reduced){
+      gi = (gi + 1) % greetings.length;
+      showGreeting(gi);
+      setTimeout(cycle, 3200);
+      return;
+    }
+    // erase
+    const erase = setInterval(() => {
+      const cur = greetEl.textContent;
+      if (!cur.length){
+        clearInterval(erase);
+        gi = (gi + 1) % greetings.length;
+        cycle();
+      } else {
+        greetEl.textContent = cur.slice(0, -1);
+      }
+    }, 45);
+  }, 2600);
+}
+cycle();
+
+// ----- Scroll reveal -----
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add("is-visible"); io.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+
+// ----- Mobile nav -----
+const toggle = document.querySelector(".nav__toggle");
+const links  = document.getElementById("navLinks");
+toggle.addEventListener("click", () => {
+  const open = links.classList.toggle("open");
+  toggle.setAttribute("aria-expanded", open);
+});
+links.querySelectorAll("a").forEach(a =>
+  a.addEventListener("click", () => {
+    links.classList.remove("open");
+    toggle.setAttribute("aria-expanded", "false");
+  })
+);
+
+// ----- Footer year -----
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
