@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sakayo Toadoum Sari — NLP Researcher · PhD Candidate · African Language Technologist</title>
-<meta name="description" content="PhD candidate at CRIL-CNRS working on discourse semantics and causal reasoning. Lead NLP Engineer at PlotWeaver, voice AI for African languages.">
+<meta name="description" content="PhD candidate at CRIL-CNRS working on discourse semantics, causal reasoning, and multilingual evaluation for African languages.">
 <meta property="og:title" content="Sakayo Toadoum Sari — NLP Researcher">
 <meta property="og:description" content="Building language technology for communities the industry forgot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -193,11 +193,18 @@ section{padding:5rem clamp(1rem,6vw,4rem)}
   transition:background .2s ease,border-color .2s ease;
 }
 .pub:hover{background:var(--ink-2);border-color:var(--line);text-decoration:none}
+.pub--nolink:hover{background:transparent;border-color:transparent}
 .pub__year{font-family:var(--font-mono);font-size:.82rem;color:var(--gold)}
 .pub__title{color:var(--paper);font-weight:500;font-size:.98rem}
 .pub__venue{display:block;color:var(--muted);font-size:.84rem;margin-top:.2rem;font-weight:400}
 .pub__arrow{color:var(--muted);font-size:.85rem;transition:color .2s,transform .2s}
 .pub:hover .pub__arrow{color:var(--blue);transform:translate(3px,-3px)}
+.pubs__group{
+  font-family:var(--font-mono);font-size:.75rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted);
+  margin:1.4rem 0 .2rem .9rem;
+}
+.pubs__group:first-child{margin-top:0}
 .pubs__more{margin-top:1.6rem}
 
 /* ---------- Timeline ---------- */
@@ -293,7 +300,8 @@ footer .mono{font-family:var(--font-mono);font-size:.78rem}
   <p class="hero__name">Sakayo Toadoum Sari</p>
   <p class="hero__tagline">
     PhD candidate in AI at <strong>CRIL-CNRS, Université d'Artois</strong>, working on discourse semantics
-    and causal reasoning. <strong>Lead NLP Engineer</strong> at <strong>PlotWeaver</strong>, building voice AI for African languages.
+    and causal reasoning, and on <strong>multilingual evaluation</strong> for African languages: whether
+    benchmark numbers actually measure the reasoning they claim to.
     <strong>If your language isn't in the dataset, build the dataset.</strong>
   </p>
   <div class="hero__cta">
@@ -321,19 +329,21 @@ footer .mono{font-family:var(--font-mono);font-size:.78rem}
           rather than heuristics.
         </p>
         <p>
-          Outside the lab, I'm <strong>Lead NLP Engineer and a founding member of PlotWeaver</strong>, where I lead
-          production ASR, TTS, and MT for African languages, and I teach algorithmics at Université d'Artois. On YouTube,
-          <strong>Sakayo Tech</strong> brings AI education in French to students across francophone Africa,
-          and my mentorship program supports a first cohort of 20 young innovators in Chad.
+          A second thread runs alongside it: <strong>multilingual evaluation</strong>. Having built speech
+          and translation systems for African languages, I keep meeting the same problem, which is that the
+          automatic metrics say very little about whether a model understood anything. That question is what
+          most of my current benchmark work is about.
         </p>
         <p>
-          I've worked with UNICEF, EPFL, and Batazia, and I contribute to the
-          <strong>Masakhane</strong> and AfricaNLP communities as a researcher and reviewer.
+          I teach algorithmics at Université d'Artois. On YouTube, <strong>Sakayo Tech</strong> brings AI
+          education in French to students across francophone Africa, and my mentorship program supports a
+          first cohort of 20 young innovators in Chad. I've worked with UNICEF, EPFL, CDIAL, and Batazia, and
+          I contribute to the <strong>Masakhane</strong> and AfricaNLP communities as a researcher and reviewer.
         </p>
       </div>
       <div class="about__stats">
         <div class="stat"><b>7+</b><span>peer-reviewed publications</span></div>
-        <div class="stat"><b>5+</b><span>African languages in production systems</span></div>
+        <div class="stat"><b>5+</b><span>African languages in my research</span></div>
         <div class="stat"><b>80+</b><span>students trained in Chad &amp; Cameroon</span></div>
         <div class="stat"><b>2028</b><span>PhD defense target</span></div>
       </div>
@@ -365,16 +375,28 @@ footer .mono{font-family:var(--font-mono);font-size:.78rem}
         <span class="card__meta">Accepted · Solo entry</span>
       </article>
       <article class="card">
-        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-microphone-lines"></i></span><span class="tag tag--live">Production</span></div>
-        <h4>PlotWeaver — Voice AI</h4>
-        <p>ASR, TTS, and MT for African languages, starting with Yoruba, Igbo, and Hausa, deployed on AWS SageMaker for enterprise clients.</p>
-        <span class="card__meta">Lead NLP Engineer · founding member</span>
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-scale-unbalanced"></i></span><span class="tag tag--review">In revision</span></div>
+        <h4>AfriCOPA</h4>
+        <p>A diagnostic probe asking whether MT quality metrics track causal reasoning in African languages. They correlate with accuracy far more loosely than their use in evaluation assumes.</p>
+        <span class="card__meta">Revising after INLG 2026 review</span>
       </article>
       <article class="card">
-        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-diagram-project"></i></span><span class="tag tag--review">Under review</span></div>
-        <h4>Formal probing &amp; explainable rule learning</h4>
-        <p>Probing with inclusion-minimality guarantees, interpretable rule models with formally minimal explanations, and parameter-efficient fine-tuning studies.</p>
-        <span class="card__meta">Multiple venues</span>
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-tree"></i></span><span class="tag tag--review">Under review</span></div>
+        <h4>RF-LAD — compact formal explanations</h4>
+        <p>Logical Analysis of Data built into random forest construction via Minimal Support Sets, producing abductive explanations roughly five times smaller than standard forests on microarray data.</p>
+        <span class="card__meta">AAAI 2027 · under review</span>
+      </article>
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-layer-group"></i></span><span class="tag tag--review">Under review</span></div>
+        <h4>Beyond Separability</h4>
+        <p>Separability and discriminability come apart under LoRA. A set-cover complexity measure guides rank selection, and a contrastive coverage loss improves low-resource and out-of-distribution results.</p>
+        <span class="card__meta">EACL 2027 via ARR · under review</span>
+      </article>
+      <article class="card">
+        <div class="card__top"><span class="card__icon"><i class="fa-solid fa-diagram-project"></i></span><span class="tag tag--active">Ongoing</span></div>
+        <h4>Formal probing of language models</h4>
+        <p>Probing with inclusion-minimality guarantees: which dimensions a model actually needs to encode a property, certified rather than estimated.</p>
+        <span class="card__meta">CRIL-CNRS</span>
       </article>
       <article class="card">
         <div class="card__top"><span class="card__icon"><i class="fa-brands fa-youtube"></i></span><span class="tag tag--active">Ongoing</span></div>
@@ -391,6 +413,25 @@ footer .mono{font-family:var(--font-mono);font-size:.78rem}
     <p class="section__eyebrow">03 · Publications</p>
     <h2 class="section__title">Selected papers<span class="dot">.</span></h2>
     <div class="pubs">
+
+      <p class="pubs__group">Under review</p>
+      <div class="pub pub--nolink">
+        <span class="pub__year">2027</span>
+        <span class="pub__title">RF-LAD: Compact Formal Explanations for Random Forests via Logical Analysis of Data
+          <span class="pub__venue">AAAI 2027 · under review</span></span>
+      </div>
+      <div class="pub pub--nolink">
+        <span class="pub__year">2027</span>
+        <span class="pub__title">Beyond Separability: Shaping Discriminative Representations in Parameter-Efficient Fine-Tuning
+          <span class="pub__venue">EACL 2027 via ACL Rolling Review · under review</span></span>
+      </div>
+      <div class="pub pub--nolink">
+        <span class="pub__year">2026</span>
+        <span class="pub__title">AfriCOPA: When MT Quality Metrics Lie About Causality — A Diagnostic Probe for African-Language Causal Reasoning
+          <span class="pub__venue">In revision</span></span>
+      </div>
+
+      <p class="pubs__group">Published</p>
       <a class="pub" href="https://toadoum.github.io" target="_blank" rel="noopener">
         <span class="pub__year">2026</span>
         <span class="pub__title">IntertextMigra: Detecting Experiential Intertextuality in Migration Narratives
@@ -450,12 +491,12 @@ footer .mono{font-family:var(--font-mono);font-size:.78rem}
       <div class="tl tl--now">
         <span class="tl__year">2026 — now</span>
         <h4>PhD Year 2 · CRIL-CNRS, Université d'Artois</h4>
-        <p>First papers accepted (SIGDIAL, CORIA-TALN). Teaching algorithmics. Lead NLP Engineer at PlotWeaver, voice AI in production.</p>
+        <p>First papers accepted at SIGDIAL and CORIA-TALN, with submissions under review at AAAI and EACL. Teaching algorithmics, and working on benchmarks for causal reasoning in African languages.</p>
       </div>
       <div class="tl">
         <span class="tl__year">2025</span>
         <h4>PhD begins · UNICEF · CDIAL</h4>
-        <p>Joined CRIL on the ANR HYCI project. RCCE consultancy for UNICEF in Chad. Built African ASR/TTS systems at CDIAL.</p>
+        <p>Joined CRIL on the ANR HYCI project. RCCE consultancy for UNICEF in Chad. Worked on ASR and TTS for African languages at CDIAL, including a human evaluation pipeline with 20+ annotators.</p>
       </div>
       <div class="tl">
         <span class="tl__year">2023</span>
@@ -485,6 +526,7 @@ footer .mono{font-family:var(--font-mono);font-size:.78rem}
         <h4>Research</h4>
         <div class="chips">
           <span class="chip">Discourse semantics</span><span class="chip">Causal reasoning</span>
+          <span class="chip">Multilingual evaluation</span><span class="chip">Benchmark design</span>
           <span class="chip">Formal XAI</span><span class="chip">SAT / ASP</span>
           <span class="chip">Machine translation</span><span class="chip">RAG</span>
         </div>
@@ -535,8 +577,8 @@ footer .mono{font-family:var(--font-mono);font-size:.78rem}
 const greetings = [
   { text: "Lapia.",   lang: "Ngambay",  note: "spoken by ~1M people in Chad" },
   { text: "Bonjour.", lang: "French",   note: "lingua franca across 21 African countries" },
-  { text: "Sannu.",   lang: "Hausa",    note: "~80M speakers · in production at PlotWeaver" },
-  { text: "Ẹ n lẹ́.",  lang: "Yoruba",   note: "~45M speakers · in production at PlotWeaver" },
+  { text: "Sannu.",   lang: "Hausa",    note: "~80M speakers · Nigeria, Niger, Chad" },
+  { text: "Ẹ n lẹ́.",  lang: "Yoruba",   note: "~45M speakers · in my benchmark work" },
   { text: "Hello.",   lang: "English",  note: "the one the datasets already know" }
 ];
 const greetEl = document.getElementById("greetText");
